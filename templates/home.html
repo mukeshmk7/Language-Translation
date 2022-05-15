@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Translate</title>
+    </head>
+    <body>
+        <form action="predict" method="post">
+            <h4>Enter your text here</h4>
+            <textarea rows = "15" cols = "80" name = "from_language"></textarea>
+            <br>
+            <br>
+            <label for="select_lang">Translate to Language:</label>
+            <select name="lang">
+            <option value="Tamil">Tamil</option>
+            <option value="Bengali">Bengali</option>
+            <option value="English">English</option>
+            <option value="French">French</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit">Translate</button>   
+            <br>
+            <br>
+            {% if output %}
+            <textarea rows = "15" cols = "80">{{output}}</textarea>
+            <br>
+            <br>
+            <a href="/">Home</a>
+            {% endif %}
+        </form>
+    </body>
+</html>
